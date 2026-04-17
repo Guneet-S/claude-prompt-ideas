@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude Prompt Ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">&#9670;</span>
+        <span class="logo-text">PromptKit</span>
+      </div>
+      <div class="nav-links">
+        <a href="#prompts">Prompts</a>
+        <a href="#categories">Categories</a>
+        <a href="https://claude.ai" target="_blank" class="nav-cta">Try Claude</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#prompts">Prompts</a>
+      <a href="#categories">Categories</a>
+      <a href="https://claude.ai" target="_blank">Try Claude</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-dot"></span>
+        Powered by Claude AI
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        <span class="line">Unlock the Power</span>
+        <span class="line gradient-text">of the Right Prompt</span>
+      </h1>
+      <p class="hero-sub" id="heroSub">
+        Curated, copy-ready prompts for writing, coding, research, creativity, and beyond.
+        Get more out of Claude — instantly.
+      </p>
+      <div class="hero-actions" id="heroActions">
+        <a href="#prompts" class="btn-primary">Explore Prompts</a>
+        <a href="#categories" class="btn-secondary">Browse Categories</a>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="stat"><span class="stat-num">60+</span><span class="stat-label">Prompts</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">8</span><span class="stat-label">Categories</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Forever</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="search-section" id="prompts">
+    <div class="container">
+      <div class="search-wrap" id="searchWrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" id="searchInput" placeholder="Search prompts..." />
+        <button class="search-clear" id="searchClear">&#10005;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Filter -->
+  <section class="categories-filter" id="categories">
+    <div class="container">
+      <div class="filter-scroll" id="filterScroll">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="writing">Writing</button>
+        <button class="filter-btn" data-cat="coding">Coding</button>
+        <button class="filter-btn" data-cat="business">Business</button>
+        <button class="filter-btn" data-cat="creative">Creative</button>
+        <button class="filter-btn" data-cat="research">Research</button>
+        <button class="filter-btn" data-cat="productivity">Productivity</button>
+        <button class="filter-btn" data-cat="learning">Learning</button>
+        <button class="filter-btn" data-cat="data">Data</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prompts Grid -->
+  <section class="prompts-section">
+    <div class="container">
+      <div class="prompts-grid" id="promptsGrid"></div>
+      <div class="no-results" id="noResults" style="display:none">
+        <p>No prompts found. Try a different search.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-icon">&#9670;</span>
+          <span class="logo-text">PromptKit</span>
+        </div>
+        <p class="footer-sub">Built for Claude. Made with curiosity.</p>
+        <div class="footer-links">
+          <a href="https://claude.ai" target="_blank">Claude AI</a>
+          <a href="https://anthropic.com" target="_blank">Anthropic</a>
+          <a href="https://github.com/Guneet-S/claude-prompt-ideas" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copy Toast -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
